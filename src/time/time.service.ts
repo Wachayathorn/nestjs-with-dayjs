@@ -11,7 +11,7 @@ dayjs.tz.setDefault("Asia/Bangkok");
 
 @Injectable()
 export class TimeService {
-    public dayjs(timeNow? : string) {
+    public dayjs(timeNow? : string | Date) {
         return dayjs(timeNow).tz();
     }
 }

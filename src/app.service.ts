@@ -6,13 +6,12 @@ export class AppService {
 
   constructor(private readonly timeService: TimeService) {
     this.onStart();
-    // this.getDatesRange('2021-12-31T02:30:00.000Z' , '2022-01-01T17:00:00.000Z')
   }
 
   public async onStart() {
     try {
-      const dateNow = this.timeService.dayjs().tz().format();
-      console.log(dateNow);
+      const dateNow = this.timeService.dayjs();
+      console.log(dateNow)
     } catch (error) {
       console.log(error);
     }
